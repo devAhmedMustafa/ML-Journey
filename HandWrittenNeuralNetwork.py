@@ -23,12 +23,11 @@ if __name__ == "__main__":
     # model.fit(x_train, y_train, epochs=3)
     # model.save('handwritten.keras')
 
-    # model = tf.keras.models.load_model('handwritten.keras')
+    model = tf.keras.models.load_model('handwritten.keras')
 
-    img = cv.imread("HandWrittenDigits/Seven.png")
-    print(img)
-    # img = np.invert(np.array([img]))
-    # predict = model.predict(img)
-    # print(f"This digit may be {np.argmax(predict)}")
-    # plt.imshow(img[0], cmap=plt.cm.binary)
-    # plt.show()
+    img = cv.imread("HandWrittenDigits/Seven.png")[:, :, 0]
+    img = np.invert(np.array([img]))
+    predict = model.predict(img)
+    print(f"This digit may be {np.argmax(predict)}")
+    plt.imshow(img[0], cmap=plt.cm.binary)
+    plt.show()
