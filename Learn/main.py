@@ -9,6 +9,7 @@ from KMeansClustering import KMeans
 from LogisticRegressionModel import LogisticRegression
 
 df = pd.read_csv("train.csv")
+print(df.head())
 df = df[["LotArea", "SalePrice"]]
 df.rename(columns={"BedroomAbvGr": "Bedrooms"}, inplace=True)
 
@@ -17,19 +18,19 @@ df = df.dropna()
 X = df.drop("SalePrice", axis=1)
 y = df["SalePrice"]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=121)
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=121)
 
-fig = plt.figure(figsize=(8, 6))
+# fig = plt.figure(figsize=(8, 6))
 
-lm = LinearRegression(lr=0.01)
-lm.fit(X_train, y_train)
-pred = lm.predict(X_test)
+# lm = LinearRegression(lr=0.01)
+# lm.fit(X_train, y_train)
+# pred = lm.predict(X_test)
 
-def mse(y_test, predictions):
-    return np.mean((y_test-predictions)**2)
+# def mse(y_test, predictions):
+#     return np.mean((y_test-predictions)**2)
 
-error = mse(y_test, pred)
-print(error)
+# error = mse(y_test, pred)
+# print(error)
 
 
 # if __name__ == "__main__":
