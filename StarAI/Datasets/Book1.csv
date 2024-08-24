@@ -1,9 +1,9 @@
-ID,Name,Gender,Watching Time,Videos watched
-1,Ahmed,Male,22,5
-2,Amr,Male,12,3
-3,Nour,Female,4,1.5
-4,Ali,Male,1,1
-5,Saif,Male,6,2
-6,Taha,Male,3,1
-7,Salah,Male,20,4
-8,Malak,Female,59,12
+ID,Name,Gender,Watching Time,Videos watched,Will Watch
+1,Ahmed,Male,22,5, 1
+2,Amr,Male,12,3, 0
+3,Nour,Female,4,1.5, 0
+4,Ali,Male,1,1, 0
+5,Saif,Male,6,2, 0
+6,Taha,Male,3,1, 0
+7,Salah,Male,20,4, 1
+8,Malak,Female,59,12, 1

@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from StarAI.Math.Math import *
 
 
 def plot_points(x, y, x_label="x-axis", y_label="y-axis", title="Plot dataset"):
@@ -15,6 +16,12 @@ def plot_linear(m, c, X):
 
     x = np.linspace(np.min(X), np.max(X), 100)
     y = x*m + c
+
+    plt.plot(x, y)
+
+def plot_sigmoid(m, c, X):
+    x = np.linspace(np.min(X), np.max(X), 100)
+    y = sigmoid(x)
 
     plt.plot(x, y)
 

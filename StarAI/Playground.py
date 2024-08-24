@@ -9,10 +9,22 @@ if __name__ == "__main__":
 
     x_train, x_test, y_train, y_test = clean_data("./Datasets/Book1.csv", 'Watching Time', ['ID', 'Name', 'Gender'])
 
-    lm = LinearRegression()
-    lm.fit(x_train, y_train)
-    plot_linear_model(lm)
+    model = LinearRegression()
+    model.fit(x_train, y_train)
+    plot_logistic_model(model)
 
-    y_predict = lm.predict(x_test)
+    y_pred = model.predict(x_test)
 
-    print(mean_square_error(y_predict, y_test))
+    print(mean_square_error(y_test, y_pred))
+
+    # x_train, x_test, y_train, y_test = clean_data("./Datasets/Book1.csv", 'Watching Time', ['ID', 'Name', 'Gender'])
+    #
+    # lm = LinearRegression()
+    # lm.fit(x_train, y_train)
+    # plot_linear_model(lm)
+    #
+    # y_predict = lm.predict(x_test)
+    #
+    # print(mean_square_error(y_predict, y_test))
+
+
